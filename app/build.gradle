@@ -7,6 +7,10 @@ android {
     namespace 'com.practica1'
     compileSdk 32
 
+    buildFeatures{
+        viewBinding true
+    }
+
     defaultConfig {
         applicationId "com.practica1"
         minSdk 23

@@ -39,14 +39,16 @@ class MainActivity2 : AppCompatActivity() {
             spinner.adapter = adapter
         }
 
-        spinner.onItemSelectedListener= object: AdapterView.OnItemSelectedListener {
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(parent: AdapterView<*>, view: View?, pos: Int, id: Long) {
-                if(pos == 0) {
-                    supportFragmentManager.beginTransaction().replace(R.id.main_frame, ecuationOne).commit()
+                if (pos == 0) {
+                    supportFragmentManager.beginTransaction().replace(R.id.main_frame, ecuationOne)
+                        .commit()
                 }
-                if(pos == 1) {
-                    supportFragmentManager.beginTransaction().replace(R.id.main_frame, ecuationTwo).commit()
+                if (pos == 1) {
+                    supportFragmentManager.beginTransaction().replace(R.id.main_frame, ecuationTwo)
+                        .commit()
                 }
             }
 
@@ -56,8 +58,4 @@ class MainActivity2 : AppCompatActivity() {
         }
 
     }
-
-
-
-
 }
