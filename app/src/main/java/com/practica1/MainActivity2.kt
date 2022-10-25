@@ -14,22 +14,30 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var ecuationOne: EcuationOne
     private lateinit var ecuationTwo: EcuationTwo
     private lateinit var transaction: FragmentTransaction
+    private lateinit var spinner: Spinner
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        val spinner : Spinner = findViewById(R.id.spinner_ecuation)
+        val transaction = supportFragmentManager.beginTransaction()
+        spinner = findViewById(R.id.spinner_ecuation)
 
         ecuationOne = EcuationOne()
         ecuationTwo = EcuationTwo()
 
-        supportFragmentManager.beginTransaction().add(R.id.main_frame, ecuationOne).commit()
+        transaction.add(R.id.main_frame, ecuationOne).commit()
 
-        val lista = listOf("Ecuacion 1", "Ecuacion 2")
-        val adaptador = ArrayAdapter(this, android.R.layout.simple_spinner_item, lista)
 
-        spinner.adapter = adaptador
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.ecuations,
+            R.layout.spinner_select
+        ).also { adapter ->
+            adapter.setDropDownViewResource(R.layout.spinner_items)
+            spinner.adapter = adapter
+        }
 
         spinner.onItemSelectedListener= object: AdapterView.OnItemSelectedListener {
 

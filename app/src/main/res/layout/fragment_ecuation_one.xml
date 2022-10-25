@@ -1,17 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EcuationOne">
 
-    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:fontFamily="casual"
+        android:text="@string/demo"
+        android:textAlignment="center"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="331dp"
-        android:src="@drawable/ecua1" />
+        android:layout_width="wrap_content"
+        android:layout_height="200sp"
+        android:src="@drawable/vol_cilindro"
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/txtResultado"
+        />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/txtRadio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="20sp"
+        android:text="@string/radio"
+        android:textSize="@dimen/subtitle"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="@color/slate_600" />
+
+    <EditText
+        android:id="@+id/numRadio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtRadio"
+        android:layout_marginTop="8sp"
+        android:background="@drawable/style_border"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/slate_600"
+        android:textColorLink="@color/slate_400" />
+    <TextView
+        android:id="@+id/txtAltura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numRadio"
+        android:layout_marginTop="20sp"
+        android:text="@string/altura"
+        android:textSize="@dimen/subtitle"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="@color/slate_600" />
+
+    <EditText
+        android:id="@+id/numAltura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAltura"
+        android:layout_marginTop="8sp"
+        android:background="@drawable/style_border"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/slate_600" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numAltura"
+        android:layout_marginHorizontal="50sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:text="@string/calcular" />
+
+</RelativeLayout>
