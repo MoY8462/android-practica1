@@ -42,14 +42,12 @@ class MainActivity2 : AppCompatActivity() {
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(parent: AdapterView<*>, view: View?, pos: Int, id: Long) {
-                if (pos == 0) {
+                if (pos == 0)
                     supportFragmentManager.beginTransaction().replace(R.id.main_frame, ecuationOne)
                         .commit()
-                }
-                if (pos == 1) {
+                if (pos == 1)
                     supportFragmentManager.beginTransaction().replace(R.id.main_frame, ecuationTwo)
                         .commit()
-                }
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {

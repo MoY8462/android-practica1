@@ -1,16 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EcuationTwo">
+    tools:context=".EcuationOne">
 
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:fontFamily="casual"
+        android:text="@string/ecuacion2"
+        android:textAlignment="center"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
+        android:layout_height="170sp"
+        android:src="@drawable/triangulo"
+        android:layout_marginTop="20sp"
+        android:layout_below="@+id/txtResultado"
+        />
+    <Spinner
+        android:id="@+id/spinner_element"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/pvnrn" />
+        android:layout_marginTop="20sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/slate_700"
+        android:gravity="start"
+        android:layout_below="@+id/imageView"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/txtElemento1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_element"
+        android:layout_marginTop="20sp"
+        android:text="@string/radio"
+        android:textSize="@dimen/subtitle"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="@color/slate_600"
+        />
+
+    <EditText
+        android:id="@+id/numElemento1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtElemento1"
+        android:layout_marginTop="8sp"
+        android:background="@drawable/style_border"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="@color/slate_600"
+        android:textColorLink="@color/slate_400" />
+    <TextView
+        android:id="@+id/txtElemento2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numElemento1"
+        android:layout_marginTop="20sp"
+        android:text="@string/altura"
+        android:textSize="@dimen/subtitle"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:textColor="@color/slate_600" />
+
+    <EditText
+        android:id="@+id/numElemento2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtElemento2"
+        android:layout_marginTop="8sp"
+        android:background="@drawable/style_border"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="@color/slate_600" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numElemento2"
+        android:layout_marginHorizontal="50sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="casual"
+        android:textStyle="bold"
+        android:text="@string/calcular" />
+
+</RelativeLayout>

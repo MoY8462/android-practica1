@@ -48,7 +48,7 @@
         android:layout_marginTop="8sp"
         android:background="@drawable/style_border"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textColor="@color/slate_600"
         android:textColorLink="@color/slate_400" />
     <TextView
@@ -71,7 +71,7 @@
         android:layout_marginTop="8sp"
         android:background="@drawable/style_border"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textColor="@color/slate_600" />
 
     <Button

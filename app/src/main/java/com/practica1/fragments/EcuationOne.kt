@@ -1,7 +1,5 @@
 package com.practica1
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,13 +22,12 @@ class EcuationOne : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentEcuationOneBinding.inflate(inflater, container, false)
         return binding.root
     }
 
-    @SuppressLint("StringFormatMatches")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -51,9 +48,9 @@ class EcuationOne : Fragment() {
                     val volumen : Double = radio.toFloat()* altura.toFloat() * 3.1416 * radio.toFloat()
                     val df = DecimalFormat("#.##")
                     df.roundingMode = RoundingMode.DOWN
-                    val roundVolumen = df.format(volumen)
-                    binding.txtResultado.text = "V = ${roundVolumen.toString()} cm³" //getString(R.string.volumen,volumen)
-                    Toast.makeText(requireActivity(), "V = ${volumen.toString()} cm³", Toast.LENGTH_LONG).show()
+                    val roundVolumen = df.format(volumen).toString()
+                    binding.txtResultado.text =  getString(R.string.volumen, roundVolumen)
+                    Toast.makeText(requireActivity(), getString(R.string.volumen, roundVolumen), Toast.LENGTH_LONG).show()
                 }
 
             }
