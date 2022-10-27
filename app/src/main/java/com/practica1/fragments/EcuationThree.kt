@@ -106,16 +106,16 @@ class EcuationThree : Fragment() {
 
 
             if (presion.isEmpty() and (elementCalcular != "p")) {
-                binding.numPresion.error = "Valor Requerido"
+                binding.numPresion.error = getString(R.string.requerido)
             }
             else if (volumen.isEmpty()  and (elementCalcular != "v")) {
-                binding.numVolumen.error  = "Valor Requerido"
+                binding.numVolumen.error  = getString(R.string.requerido)
             }
             else if(mol.isEmpty() and (elementCalcular != "n")) {
-                binding.numMol.error = "Valor Requerido"
+                binding.numMol.error = getString(R.string.requerido)
             }
             else if(temperatura.isEmpty() and (elementCalcular != "t")){
-                binding.numTemperatura.error  = "Valor Requerido"
+                binding.numTemperatura.error  = getString(R.string.requerido)
             }
 
             //else if (presion.toFloat() < 0) binding.numPresion.error = "Valor erroneo"

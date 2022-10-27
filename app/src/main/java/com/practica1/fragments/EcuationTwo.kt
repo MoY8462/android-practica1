@@ -83,18 +83,16 @@ class EcuationTwo : Fragment() {
 
             when {
                 element1.isEmpty() -> {
-                    //Toast.makeText(requireActivity(), "Ingresa el radio del cilindro", Toast.LENGTH_SHORT).show()
-                    binding.numElemento1.error = "Valor Requerido"
+                    binding.numElemento1.error = getString(R.string.requerido)
                 }
                 element2.isEmpty() -> {
-                    //Toast.makeText(requireActivity(), "Ingresa la altura del cilindro", Toast.LENGTH_SHORT).show()
-                    binding.numElemento2.error  = "Valor Requerido"
+                    binding.numElemento2.error  = getString(R.string.requerido)
                 }
                 else -> {
                     when(elementCalcular){
                         "a" -> {
                             if(element1.toFloat() >= element2.toFloat())
-                                Toast.makeText(requireActivity(),"El valor de la hipotenusa no puede ser menor al cateto o iguales",Toast.LENGTH_LONG).show()
+                                Toast.makeText(requireActivity(),getString(R.string.hip_iguales),Toast.LENGTH_LONG).show()
                             else{
                                 resolveEcuation(element1.toFloat(),element2.toFloat(),elementCalcular)
                             }
@@ -102,7 +100,7 @@ class EcuationTwo : Fragment() {
                         }
                         "b" -> {
                             if(element1.toFloat() >= element2.toFloat())
-                                Toast.makeText(requireActivity(),"El valor de la hipotenusa no puede ser menor al cateto o iguales",Toast.LENGTH_LONG).show()
+                                Toast.makeText(requireActivity(),getString(R.string.hip_iguales),Toast.LENGTH_LONG).show()
                             else{
                                 resolveEcuation(element1.toFloat(),element2.toFloat(),elementCalcular)
                             }
@@ -123,7 +121,6 @@ class EcuationTwo : Fragment() {
             df.roundingMode = RoundingMode.DOWN
             val roundHip= df.format(hip).toString()
             binding.txtResultado.text = getString(R.string.hip_res,roundHip)
-            Toast.makeText(requireActivity(),"El valor de la hipotenusa es $roundHip",Toast.LENGTH_LONG).show()
         }
         else {
             val cateto: Double = sqrt(Math.pow(element2.toDouble(),2.toDouble())-Math.pow(element1.toDouble(),2.toDouble()))
@@ -131,7 +128,6 @@ class EcuationTwo : Fragment() {
             df.roundingMode = RoundingMode.DOWN
             val roundCateto= df.format(cateto).toString()
             binding.txtResultado.text = getString(R.string.cateto_res,lado,roundCateto)
-            Toast.makeText(requireActivity(),"El valor del cateto $lado es $roundCateto",Toast.LENGTH_LONG).show()
         }
     }
 

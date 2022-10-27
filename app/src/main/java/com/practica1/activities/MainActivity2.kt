@@ -6,16 +6,13 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentTransaction
 import com.practica1.fragments.EcuationThree
 
-
-class MainActivity2 : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity(){
 
     private lateinit var ecuationOne: EcuationOne
     private lateinit var ecuationTwo: EcuationTwo
     private lateinit var ecuationThree: EcuationThree
-    private lateinit var transaction: FragmentTransaction
     private lateinit var spinner: Spinner
 
 
@@ -67,5 +64,9 @@ class MainActivity2 : AppCompatActivity() {
             }
         }
 
+
+
     }
+
+
 }

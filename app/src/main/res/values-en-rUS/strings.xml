@@ -1,4 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Fisicari</string>
+    <string name="ecuacion1">Volume of a cylinder</string>
+    <string name="volumen">V = %1$s [cm³]</string>
+    <string name="radio">Radio (r): [cm]</string>
+    <string name="altura">Height (h): [cm]</string>
+    <string name="ecuacion2">Right triangle</string>
+    <string name="calcular">Calculate</string>
+    <string name="catetob">Hick b:</string>
+    <string name="cateto_res">%1$s = %2$s</string>
+    <string name="hipotenusa">Hypotenuse c:</string>
+    <string name="hip_res">c = %1$s</string>
+    <string name="catetoa">Hick a:</string>
+    <string name="ecuacion3">Noble Gas Equation</string>
+    <string name="presion">Pressure [atm]:</string>
+    <string name="volumen3">Volume [L]:</string>
+    <string name="mol">Number of moles:</string>
+    <string name="temperatura">Temperature [K]:</string>
+    <string name="requerido">Required value</string>
+    <string name="hip_iguales">The value of the hypotenuse cannot be less than or equal to the leg.</string>
+    <string name="hello_blank_fragment">Hello Fragment</string>
+    <string-array name="ecuations">
+        <item>Volume of a cylinder</item>
+        <item>Right triangle</item>
+        <item>Noble Gas Equation</item>
+    </string-array>
+    <string-array name="gases">
+        <item>Pressure</item>
+        <item>Volume</item>
+        <item>Number of moles</item>
+        <item>Temperature</item>
+    </string-array>
+    <string-array name="triangulo">
+        <item>Hick a</item>
+        <item>Hick b</item>
+        <item>Hypotenuse c</item>
+    </string-array>
 </resources>

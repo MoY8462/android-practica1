@@ -51,6 +51,7 @@
         android:inputType="numberDecimal"
         android:textColor="@color/slate_600"
         android:textColorLink="@color/slate_400" />
+
     <TextView
         android:id="@+id/txtAltura"
         android:layout_width="match_parent"
