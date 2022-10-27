@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fisicari</string>
+    <string name="ecuacion1">Volumen de un cilindro</string>
+    <string name="volumen">V = %1$s [cm³]</string>
+    <string name="radio">Radio (r): [cm]</string>
+    <string name="altura">Altura (h): [cm]</string>
+    <string name="ecuacion2">Triángulo rectángulo</string>
+    <string name="calcular">Calcular</string>
+    <string name="catetob">Cateto b:</string>
+    <string name="cateto_res">%1$s = %2$s</string>
+    <string name="hipotenusa">Hipotenusa c:</string>
+    <string name="hip_res">c = %1$s</string>
+    <string name="catetoa">Cateto a:</string>
+    <string name="ecuacion3">Ecuación de los gases noblespre</string>
+    <string name="presion">Presión [atm]:</string>
+    <string name="volumen3">Volumen [L]</string>
+    <string name="mol">Número de moles:</string>
+    <string name="temperatura">Temperatura [K]:</string>
+    <string name="requerido">Valor requerido</string>
+    <string name="hip_iguales">El valor de la hipotenusa no puede ser menor al cateto o iguales.</string>
+</resources>

@@ -1,13 +1,62 @@
 <resources>
     <string name="app_name">Fisicari</string>
-    <string name="title">Fisicari</string>
-    <string name="version">1.0</string>
-    <string name="creator">Moises Sanchez</string>
+    <string name="title" translatable="false">Fisicari</string>
+    <string name="version" translatable="false">1.0</string>
+    <string name="creator" translatable="false">Moises Sanchez</string>
 
     <string-array name="ecuations">
-        <item>Ecuacion 1</item>
-        <item>Ecuacion 2</item>
+        <item>Volumen de un cilindro</item>
+        <item>Triángulo rectángulo</item>
+        <item>Gases nobles</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="demo">Demo</string>
+
+    <!--Ecuación 1-->
+    <string-array name="triangulo">
+        <item>Cateto a</item>
+        <item>Cateto b</item>
+        <item>Hipotenusa c</item>
+    </string-array>
+    <string name="ecuacion1">Volumen de un cilindro</string>
+    <string name="volumen">V = %1$s [cm³]</string>
+    <string name="radio">Radio (r): [cm]</string>
+    <string name="altura">Altura (h): [cm]</string>
+
+    <!--Ecuación 2-->
+    <string name="ecuacion2">Triángulo rectángulo</string>
+    <string name="calcular">Calcular</string>
+    <string name="catetob">Cateto b:</string>
+    <string name="cateto_res">%1$s = %2$s</string>
+    <string name="hipotenusa">Hipotenusa c:</string>
+    <string name="hip_res">c = %1$s</string>
+    <string name="catetoa">Cateto a:</string>
+
+    <!--Ecuación 3-->
+    <string name="ecuacion3">Ecuación de los gases nobles</string>
+    <string-array name="gases">
+        <item>Presión</item>
+        <item>Volumen</item>
+        <item>Número de moles</item>
+        <item>Temperatura</item>
+    </string-array>
+    <string name="presion">Presión [atm]:</string>
+    <string name="volumen3">Volumen [L]:</string>
+    <string name="mol">Número de moles:</string>
+    <string name="temperatura">Temperatura [K]:</string>
+    <string name="presion_res" translatable="false">P = %1$s</string>
+    <string name="vol_res" translatable="false">V = %1$s</string>
+    <string name="mol_res" translatable="false">n = %1$s</string>
+    <string name="temp_res" translatable="false">T = %1$s</string>
+    <string name="requerido">Valor requerido</string>
+    <string name="hip_iguales">El valor de la hipotenusa no puede ser menor al cateto o iguales</string>
+    <string name="hello_blank_fragment">Hello Fragment</string>
+    <string name="title_activity_main4">MainActivity4</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

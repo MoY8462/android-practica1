@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EcuationOne">
+
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:fontFamily="casual"
+        android:text="@string/ecuacion3"
+        android:textAlignment="center"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_below="@+id/txtResultado"
+        android:layout_marginTop="20sp"
+        android:src="@drawable/pvnrt" />
+
+    <Spinner
+        android:id="@+id/spinner_element"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:backgroundTint="@color/slate_700"
+        android:gravity="start"
+        android:layout_marginTop="20sp"
+        android:minHeight="48dp" />
+
+    <GridLayout
+        android:id="@+id/grid_ecuation3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_element"
+        android:layout_marginTop="20sp"
+        android:layout_gravity="center"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:useDefaultMargins="true">
+
+
+        <TextView
+            android:layout_gravity="fill"
+            android:text="@string/presion"
+            android:fontFamily="casual"
+            android:textSize="@dimen/subtitle"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_gravity="fill"
+            android:text="@string/volumen3"
+            android:fontFamily="casual"
+            android:textSize="@dimen/subtitle"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/numPresion"
+            android:background="@drawable/style_border"
+
+            android:ems="7"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/numVolumen"
+            android:layout_gravity="fill"
+            android:background="@drawable/style_border"
+            android:ems="7"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:layout_gravity="fill"
+            android:text="@string/mol"
+            android:fontFamily="casual"
+            android:textSize="@dimen/subtitle"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_gravity="fill"
+            android:text="@string/temperatura"
+            android:fontFamily="casual"
+            android:textSize="@dimen/subtitle"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/numMol"
+            android:background="@drawable/style_border"
+            android:ems="7"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/numTemperatura"
+            android:layout_gravity="fill"
+            android:background="@drawable/style_border"
+            android:ems="7"
+            android:inputType="numberDecimal" />
+
+
+    </GridLayout>
+
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grid_ecuation3"
+        android:layout_marginHorizontal="50sp"
+        android:layout_marginTop="20sp"
+        android:fontFamily="casual"
+        android:text="@string/calcular"
+        android:textStyle="bold" />
+
+</RelativeLayout>
