@@ -4,75 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity3">
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txtResultado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="casual"
-        android:text="@string/ecuacion2"
+        android:text="@string/ecuacion1"
         android:textAlignment="center"
         android:textSize="@dimen/title"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.064"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.084"
+        tools:layout_editor_absoluteX="-25dp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="353dp"
-        android:layout_height="223dp"
+        android:layout_width="212dp"
+        android:layout_height="263dp"
         android:layout_below="@+id/txtResultado"
-        android:src="@drawable/triangulo"
+        android:src="@drawable/vol_cilindro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.261" />
+        app:layout_constraintVertical_bias="0.435" />
 
     <TextView
-        android:id="@+id/txtC"
+        android:id="@+id/txtRadio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.207"
+        app:layout_constraintVertical_bias="0.238"
         android:textSize="@dimen/subtitle"
         android:fontFamily="casual"
         android:textStyle="bold"
         android:textColor="@color/slate_600"/>
 
     <TextView
-        android:id="@+id/txtA"
+        android:id="@+id/txtAltura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.529"
+        app:layout_constraintVertical_bias="0.425"
         android:textSize="@dimen/subtitle"
         android:fontFamily="casual"
         android:textStyle="bold"
         android:textColor="@color/slate_600"/>
 
     <TextView
-        android:id="@+id/txtB"
+        android:id="@+id/txtVol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintHorizontal_bias="0.328"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.37"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.2"
         android:textSize="@dimen/subtitle"
         android:fontFamily="casual"
         android:textStyle="bold"

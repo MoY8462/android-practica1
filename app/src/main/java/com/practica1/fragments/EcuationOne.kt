@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.practica1.activities.MainActivity3
 import com.practica1.databinding.FragmentEcuationOneBinding
 import java.math.RoundingMode
 import java.text.DecimalFormat
@@ -53,8 +52,11 @@ class EcuationOne : Fragment() {
                     val roundVolumen = df.format(volumen).toString()
                     binding.txtResultado.text =  getString(R.string.volumen, roundVolumen)
                     Toast.makeText(requireActivity(), getString(R.string.volumen, roundVolumen), Toast.LENGTH_LONG).show()
-                    var intent= Intent(this.context, MainActivity3::class .java).apply{
-                        putExtra("resultado", roundVolumen)
+
+                    var intent = Intent(this.context, MainActivity::class.java).apply{
+                        putExtra("volumen", roundVolumen)
+                        putExtra("altura",altura)
+                        putExtra("radio",radio)
                     }
                     startActivity(intent)
                 }

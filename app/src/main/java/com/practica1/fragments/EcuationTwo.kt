@@ -1,6 +1,7 @@
 package com.practica1
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -121,6 +122,12 @@ class EcuationTwo : Fragment() {
             df.roundingMode = RoundingMode.DOWN
             val roundHip= df.format(hip).toString()
             binding.txtResultado.text = getString(R.string.hip_res,roundHip)
+            var intent = Intent(this.context, MainActivity3::class.java).apply{
+                putExtra("a", element1.toString())
+                putExtra("b",element2.toString())
+                putExtra("c", roundHip)
+            }
+            startActivity(intent)
         }
         else {
             val cateto: Double = sqrt(Math.pow(element2.toDouble(),2.toDouble())-Math.pow(element1.toDouble(),2.toDouble()))
@@ -128,6 +135,26 @@ class EcuationTwo : Fragment() {
             df.roundingMode = RoundingMode.DOWN
             val roundCateto= df.format(cateto).toString()
             binding.txtResultado.text = getString(R.string.cateto_res,lado,roundCateto)
+            if(lado == "b"){
+                val intent = Intent(this.context, MainActivity3::class.java).apply {
+                    putExtra("a", element1.toString())
+                    putExtra("b", roundCateto)
+                    putExtra("c", element2.toString())
+                }
+                startActivity(intent)
+
+            }
+            else{
+                val intent = Intent(this.context, MainActivity3::class.java).apply{
+                    putExtra("a", roundCateto)
+                    putExtra("b", element1.toString())
+                    putExtra("c", element2.toString())
+                }
+                startActivity(intent)
+
+
+            }
+
         }
     }
 

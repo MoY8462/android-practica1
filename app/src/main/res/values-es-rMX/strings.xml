@@ -19,4 +19,10 @@
     <string name="temperatura">Temperatura [K]:</string>
     <string name="requerido">Valor requerido</string>
     <string name="hip_iguales">El valor de la hipotenusa no puede ser menor al cateto o iguales.</string>
+    <string name="volumen_res">Volumen = %1$s [cm³]</string>
+    <string name="altura_res">Altura = %1$s [cm]</string>
+    <string name="radio_res">Radio = %1$s [cm]</string>
+    <string name="a_res">a = %1$s</string>
+    <string name="c_res">c = %1$s</string>
+    <string name="b_res">b = %1$s</string>
 </resources>
