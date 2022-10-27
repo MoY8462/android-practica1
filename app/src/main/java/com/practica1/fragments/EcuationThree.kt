@@ -1,6 +1,7 @@
 package com.practica1.fragments
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,8 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
+import com.practica1.MainActivity3
+import com.practica1.MainActivity5
 import com.practica1.R
 import com.practica1.databinding.FragmentEcuationThreeBinding
 import java.math.RoundingMode
@@ -129,6 +132,7 @@ class EcuationThree : Fragment() {
                         df.roundingMode = RoundingMode.DOWN
                         val roundPres= df.format(presion_res).toString()
                         binding.txtResultado.text = getString(R.string.presion_res,roundPres)
+                        sendData (roundPres, volumen.toString(), temperatura.toString(), mol.toString())
                     }
                     "v" -> {
                         val vol_res = (mol.toFloat()*0.082*temperatura.toFloat())/presion.toFloat()
@@ -136,6 +140,7 @@ class EcuationThree : Fragment() {
                         df.roundingMode = RoundingMode.DOWN
                         val roundVol= df.format(vol_res).toString()
                         binding.txtResultado.text = getString(R.string.vol_res,roundVol)
+                        sendData (presion.toString(), roundVol, temperatura.toString(), mol.toString())
                     }
                     "n" -> {
                         val mol_res = (presion.toFloat()*volumen.toFloat())/(0.082*temperatura.toFloat())
@@ -143,6 +148,7 @@ class EcuationThree : Fragment() {
                         df.roundingMode = RoundingMode.DOWN
                         val roundMol= df.format(mol_res).toString()
                         binding.txtResultado.text = getString(R.string.mol_res,roundMol)
+                        sendData (presion.toString(), volumen.toString(), temperatura.toString(), roundMol)
                     }
                     "t" -> {
                         val temp_res = (presion.toFloat()*volumen.toFloat())/(0.082*mol.toFloat())
@@ -150,11 +156,21 @@ class EcuationThree : Fragment() {
                         df.roundingMode = RoundingMode.DOWN
                         val roundTemp= df.format(temp_res).toString()
                         binding.txtResultado.text = getString(R.string.temp_res,roundTemp)
+                        sendData (presion.toString(), volumen.toString(), roundTemp, mol.toString())
                     }
                 }
             }
 
         }
+    }
+    fun sendData (presion: String, volumen: String, temperatura: String, mol:String){
+        val intent = Intent(this.context, MainActivity5::class.java).apply{
+            putExtra("presion", presion)
+            putExtra("volumen", volumen)
+            putExtra("mol", mol)
+            putExtra("temperatura", temperatura)
+        }
+        startActivity(intent)
     }
     fun disabledElemetns (presion: Boolean, volumen: Boolean, temperatura: Boolean, mol:Boolean) {
         binding.numPresion.isEnabled = presion
