@@ -7,17 +7,18 @@
     <string-array name="ecuations">
         <item>Volumen de un cilindro</item>
         <item>Triángulo rectángulo</item>
+        <item>Gases nobles</item>
     </string-array>
 
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="demo">Demo</string>
+    <!--Ecuación 1-->
     <string-array name="triangulo">
         <item>Cateto a</item>
         <item>Cateto b</item>
         <item>Hipotenusa c</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="demo">Demo</string>
-    <!--Ecuación 1-->
     <string name="ecuacion1">Volumen de un cilindro</string>
     <string name="volumen">V = %1$s [cm³]</string>
     <string name="radio">Radio (r): [cm]</string>
@@ -31,4 +32,21 @@
     <string name="hipotenusa">Hipotenusa c:</string>
     <string name="hip_res">c = %1$s</string>
     <string name="catetoa">Cateto a:</string>
+
+    <!--Ecuación 3-->
+    <string name="ecuacion3">Ecuación de los gases nobles></string>
+    <string-array name="gases">
+        <item>Presión</item>
+        <item>Volumen</item>
+        <item>Número de moles</item>
+        <item>Temperatura</item>
+    </string-array>
+    <string name="presion">Presión [atm]:</string>
+    <string name="volumen3">Volumen [L]:</string>
+    <string name="mol">Número de moles:</string>
+    <string name="temperatura">Temperatura [K]:</string>
+    <string name="presion_res">P = %1$s</string>
+    <string name="vol_res">V = %1$s</string>
+    <string name="mol_res">n = %1$s</string>
+    <string name="temp_res">T = %1$s</string>
 </resources>

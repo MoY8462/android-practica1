@@ -134,6 +134,7 @@ class EcuationTwo : Fragment() {
             Toast.makeText(requireActivity(),"El valor del cateto $lado es $roundCateto",Toast.LENGTH_LONG).show()
         }
     }
+
     override fun onDestroy() {
         super.onDestroy()
         _binding = null

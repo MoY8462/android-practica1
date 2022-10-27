@@ -26,16 +26,18 @@
         android:layout_marginTop="20sp"
         android:layout_below="@+id/txtResultado"
         />
+
     <Spinner
         android:id="@+id/spinner_element"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
+        android:layout_below="@+id/imageView"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="20sp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/slate_700"
         android:gravity="start"
-        android:layout_below="@+id/imageView"/>
+        android:minHeight="48dp" />
 
     <TextView
         android:id="@+id/txtElemento1"

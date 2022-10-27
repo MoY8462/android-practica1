@@ -7,12 +7,14 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
+import com.practica1.fragments.EcuationThree
 
 
 class MainActivity2 : AppCompatActivity() {
 
     private lateinit var ecuationOne: EcuationOne
     private lateinit var ecuationTwo: EcuationTwo
+    private lateinit var ecuationThree: EcuationThree
     private lateinit var transaction: FragmentTransaction
     private lateinit var spinner: Spinner
 
@@ -26,6 +28,7 @@ class MainActivity2 : AppCompatActivity() {
 
         ecuationOne = EcuationOne()
         ecuationTwo = EcuationTwo()
+        ecuationThree = EcuationThree()
 
         transaction.add(R.id.main_frame, ecuationOne).commit()
 
@@ -42,12 +45,21 @@ class MainActivity2 : AppCompatActivity() {
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(parent: AdapterView<*>, view: View?, pos: Int, id: Long) {
-                if (pos == 0)
-                    supportFragmentManager.beginTransaction().replace(R.id.main_frame, ecuationOne)
-                        .commit()
-                if (pos == 1)
-                    supportFragmentManager.beginTransaction().replace(R.id.main_frame, ecuationTwo)
-                        .commit()
+                when (pos){
+                    0 ->{
+                        supportFragmentManager.beginTransaction().replace(R.id.main_frame, ecuationOne)
+                            .commit()
+                    }
+                    1 -> {
+                        supportFragmentManager.beginTransaction().replace(R.id.main_frame, ecuationTwo)
+                            .commit()
+                    }
+                    2 -> {
+                        supportFragmentManager.beginTransaction().replace(R.id.main_frame, ecuationThree)
+                            .commit()
+                    }
+                }
+
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
