@@ -50,13 +50,10 @@
     <string name="requerido">Valor requerido</string>
     <string name="hip_iguales">El valor de la hipotenusa no puede ser menor al cateto o iguales</string>
     <string name="hello_blank_fragment">Hello Fragment</string>
-    <string name="title_activity_main4">MainActivity4</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="volumen_res">Volumen = %1$s [cm³]</string>
+    <string name="altura_res">Altura = %1$s [cm]</string>
+    <string name="radio_res">Radio = %1$s [cm]</string>
+    <string name="a_res">a = %1$s</string>
+    <string name="b_res">b = %1$s</string>
+    <string name="c_res">c = %1$s</string>
 </resources>
