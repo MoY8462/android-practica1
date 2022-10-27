@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Fisicari</string>
     <string name="ecuacion1">Volume of a cylinder</string>
-    <string name="volumen">V = %1$s [cm³]</string>
+    <string name="volumen">V = %1$s  [cm³]</string>
     <string name="radio">Radio (r): [cm]</string>
     <string name="altura">Height (h): [cm]</string>
     <string name="ecuacion2">Right triangle</string>
@@ -36,4 +36,10 @@
         <item>Hick b</item>
         <item>Hypotenuse c</item>
     </string-array>
+    <string name="volumen_res">Volume = %1$s [cm³]</string>
+    <string name="altura_res">Height = %1$s [cm]</string>
+    <string name="radio_res">Radio = %1$s [cm]</string>
+    <string name="a_res">a = %1$s</string>
+    <string name="b_res">b = %1$s</string>
+    <string name="c_res">c = %1$s</string>
 </resources>
